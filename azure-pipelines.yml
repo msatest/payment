@@ -14,7 +14,7 @@ variables:
   # containerRegistryDockerConnection: 'acr'
   # environment: 'aks.default'
 - name: imageRepository
-  value: 'reservation'
+  value: 'payment'
 - name: dockerfilePath
   value: '**/Dockerfile'
 - name: tag
@@ -114,7 +114,7 @@ stages:
                             failureThreshold: 10
                           livenessProbe:
                             httpGet:
-                              path: /reservations/1
+                              path: /payments/1
                               port: 8080
                             initialDelaySeconds: 120
                             timeoutSeconds: 2
